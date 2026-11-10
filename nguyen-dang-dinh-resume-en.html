@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nguyen Dang Dinh</title>
+<style>
+/* Local Roboto Condensed typography, matching the reference font without copying its content. */
+@font-face { font-family: 'Roboto Condensed'; font-style: normal; font-weight: 400; font-display: swap; src: url('fonts/roboto-condensed-regular.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('fonts/roboto-condensed-bold.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto Condensed'; font-style: italic; font-weight: 400; font-display: swap; src: url('fonts/roboto-condensed-italic.ttf') format('truetype'); }
+@font-face { font-family: 'Roboto Condensed'; font-style: italic; font-weight: 700; font-display: swap; src: url('fonts/roboto-condensed-bold-italic.ttf') format('truetype'); }
+:root {
+  --paper: #ffffff;
+  --ink: #111111;
+  --secondary: #333333;
+  --rule: #b8b8b8;
+  --canvas: #ececec;
+  --heading-font: 'Roboto Condensed', Arial, sans-serif;
+  --body-font: 'Roboto Condensed', Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font-family: var(--body-font); font-size: 12pt; line-height: 1.3; padding-block: 24px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.resume { width: 210mm; max-width: 100%; margin: auto; padding: 14mm; background: var(--paper); }
+header { margin-bottom: 14px; }
+h1 { margin: 0 0 4px; font: 700 25pt/1.15 var(--heading-font); letter-spacing: -.4px; }
+.headline { margin: 0 0 8px; font-size: 12pt; }
+.contact { margin: 0; font-size: 11pt; color: var(--secondary); overflow-wrap: anywhere; }
+a { color: inherit; text-decoration: none; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+section { margin-top: 16px; }
+h2 { margin: 0 0 8px; padding-top: 10px; border-top: 1px solid var(--rule); font: 700 13pt/1.15 var(--heading-font); letter-spacing: 0; text-transform: uppercase; break-after: avoid; }
+p { margin: 0 0 5px; }
+.skills p { margin-bottom: 3px; }
+.skill-group { margin-top: 8px; }
+.skill-group:first-of-type { margin-top: 0; }
+.skill-group h3 { font-size: 10.5pt; margin-bottom: 5px; }
+.skill-label { color: var(--secondary); }
+.skill-group p { break-inside: avoid; }
+article { margin-top: 12px; break-inside: avoid; }
+section[aria-labelledby="experience"] article { break-inside: auto; }
+.skills, .skill-group { break-inside: avoid; }
+article:first-of-type { margin-top: 0; }
+h3 { margin: 0 0 3px; font-size: 12.5pt; line-height: 1.35; break-after: avoid; }
+.role, .meta { margin: 0 0 6px; color: var(--secondary); font-size: 11pt; break-after: avoid; }
+.meta { overflow-wrap: anywhere; }
+h3:has(.dates) { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.dates { font-weight: 400; font-size: 11pt; color: var(--secondary); white-space: nowrap; }
+ul { margin: 5px 0 8px; padding-left: 18px; }
+li { margin-bottom: 4px; padding-left: 1px; }
+.stack { margin: 7px 0 0; font-size: 11pt; }
+.resume > section:nth-last-child(-n+3) { margin-top: 10px; }
+.resume > section:nth-last-child(-n+3) h2 { margin-bottom: 6px; padding-bottom: 3px; }
+.resume > section:nth-last-child(-n+3) p { margin-bottom: 4px; }
+@media (max-width: 650px) { body { padding-block: 16px; } .resume { width: auto; padding: 24px 18px; } h1 { font-size: 22pt; } }
+@page { size: A4; margin: 14mm; }
+@media print {
+  body { padding: 0; background: var(--paper); }
+  .resume { width: auto; max-width: none; margin: 0; padding: 0; }
+  h1, h2, h3, .role, .meta { break-after: avoid; }
+  li { break-inside: avoid; }
+  p, li { orphans: 2; widows: 2; }
+}
+</style>
+</head>
+<body>
+<main class="resume" aria-label="Resume of Nguyen Dang Dinh">
+<header>
+<h1>Nguyen Dang Dinh</h1>
+<p class="headline">Frontend &amp; Full-Stack Developer</p>
+<p class="contact">Da Nang, Vietnam | <time datetime="2000-07-08">8/7/2000</time> | +84 977 963 775 | <a href="mailto:nguyendangdinh47@gmail.com">nguyendangdinh47@gmail.com</a></p>
+<p class="contact"><a href="https://github.com/dangdinh87">github.com/dangdinh87</a> | <a href="https://www.linkedin.com/in/dinhnguyen87/">linkedin.com/in/dinhnguyen87</a></p>
+</header>
+<section aria-labelledby="summary">
+<h2 id="summary">Professional Summary</h2>
+<p>Frontend Developer with 4 years of experience building production applications with React, Next.js, UmiJS, and TypeScript across enterprise AI, creator platforms, e-commerce, and banking webviews. Currently at DISO, building creator and admin platforms for Techcombank and Vingroup with React, focusing on frontend and contributing Go backend features. Experience includes frontend architecture, shared components, state management, streaming AI interfaces, and performance optimization. Built and run PassInterview (passinterview.app), a Next.js interview preparation platform with 5,000 users.</p>
+</section>
+<section class="skills" aria-labelledby="skills">
+<h2 id="skills">Technical Skills</h2>
+<p><strong>Frontend:</strong> JavaScript, TypeScript, HTML, CSS, React, Next.js, UmiJS</p>
+<p><strong>UI &amp; state:</strong> Tailwind CSS, SCSS, Ant Design, shadcn/ui, Bootstrap, Motion, Magic UI, Redux, dva, Zustand, TanStack Query</p>
+<p><strong>Web:</strong> Responsive design, server-side rendering (SSR), SEO, internationalization, WebView</p>
+<p><strong>Backend:</strong> Go, Echo, Node.js, Express.js, REST APIs, WebSocket, Socket.IO</p>
+<p><strong>Data:</strong> MongoDB, PostgreSQL, MySQL, Redis, Supabase</p>
+<p><strong>Testing:</strong> Jest, Playwright, Go tests, API authorization, integration and regression testing</p>
+<p><strong>Design tools:</strong> Figma, Subframe</p>
+<p><strong>Tools:</strong> Git, Docker; Claude Code, Codex, Cursor, MCP integrations and agent workflows</p>
+</section>
+<section aria-labelledby="education">
+<h2 id="education">Education</h2>
+<p><strong>University of Technology and Education – The University of Danang</strong> | Aug 2018 – Dec 2022</p>
+<p>Major: Information Technology | Degree classification: Very Good</p>
+</section>
+<section aria-labelledby="experience">
+<h2 id="experience">Professional Experience</h2>
+<article>
+<h3>DISO <span class="dates">Oct 2025 – Present</span></h3>
+<p class="role">Full-Stack Developer | <a href="https://diso.vn">diso.vn</a></p>
+<p class="meta">Projects: Tfluencer (Techcombank), Gen Green (Vingroup), Ambassador (AccessTrade)</p>
+<p>Develop creator platforms, campaign administration tools, and onboarding services across DISO client projects.</p>
+<ul>
+<li>Build creator-facing websites and admin portals across partner projects, maintaining shared React components and partner-specific workflows.</li>
+<li>Develop Tfluencer creator and administration features for campaigns, budgets, events, content moderation, KYC review, reconciliation, data exports, and partner leaderboards.</li>
+<li>Develop Gen Green, a Vingroup KOC platform: bulk content approval, Excel rejection imports, e-contracts, affiliate links, and social account linking.</li>
+<li>Build creator onboarding interfaces with Next.js, shadcn/ui, and TanStack Query for identity verification, bank-card linking, OTP verification, and electronic contracts. Integrate FPT eContract for biometric identity verification and digital contract signing.</li>
+<li>Develop the Ambassador creator app with React 18, UmiJS 4, and Express SSR for tax information, eKYC, bank details, and commissions.</li>
+<li>Implemented Ambassador role and permission management across Go/Echo APIs and the admin UI, including partner-scoped access, permission dependencies, sensitive-data masking, and session revocation when access settings change.</li>
+<li>Develop Go/Echo backend features with MongoDB and Redis. Test API authorization and role-based UI workflows using Jest, Playwright, and local services, and compare regression results with the baseline branch.</li>
+</ul>
+</article>
+<article>
+<h3>Doraverse <span class="dates">Apr 2025 – Mar 2026</span></h3>
+<p class="role">Frontend Developer</p>
+<ul>
+<li>Built streaming chat and deep-research interfaces for multiple AI models, alongside workspace dashboards for model management, permissions, credits, and Stripe billing.</li>
+<li>Established shared frontend code across administration, authentication, and meeting-note applications. Published a reusable cookie-consent npm package and led code reviews.</li>
+<li>Extended LibreChat interfaces for AI agents, debate, media tools, and notebooks; added multilingual support, responsive layouts, themes, and analytics integrations.</li>
+</ul>
+</article>
+<article>
+<h3>CaSe Group <span class="dates">Dec 2022 – Mar 2025</span></h3>
+<p class="role">Frontend Developer (with Backend Responsibilities)</p>
+<p class="meta">Products: Selly (e-commerce platform), Cashbag (cashback webviews in banking apps)</p>
+<ul>
+<li>Developed Cashbag webviews for 15+ banking apps and partner apps, with bank-specific branding, deep links, and Adjust tracking.</li>
+<li>Built Zalo Mini Apps for both Selly and Cashbag.</li>
+<li>Built and maintained Selly e-commerce frontends, administration dashboards, real-time chat, and brand websites; integrated third-party APIs and multilingual interfaces.</li>
+<li>Refactored shared components, optimized frontend performance, reviewed code, and developed backend features with Go and MongoDB.</li>
+</ul>
+</article>
+<article>
+<h3>NCCSoft <span class="dates">Sep 2021 – Nov 2021</span></h3>
+<p class="role">Full-Stack Developer Intern</p>
+<ul>
+<li>Completed a training project with React, Express.js, and MongoDB.</li>
+<li>Developed features and fixed bugs in production projects.</li>
+</ul>
+</article>
+</section>
+<section aria-labelledby="projects">
+<h2 id="projects">Project Portfolio</h2>
+<article>
+<h3>Doraverse – Enterprise AI Workspace</h3>
+<p class="meta">Client: Doraverse | Team size: 10 | Role: Frontend Developer</p>
+<p>AI workspace built on LibreChat with multi-model chat, AI agents, image and video tools, notebooks, AI debate, meeting notes, and admin features.</p>
+<ul>
+<li>Set up the frontend architecture for the workspace admin, authentication, and meeting-note apps.</li>
+<li>Built charts with Recharts and frontend pages for model settings, credits, permissions, Stripe billing, and workspace branding.</li>
+<li>Used Zustand for client state and TanStack Query for API data. Connected the frontend to streaming and real-time updates with Socket.IO.</li>
+<li>Built chat and deep-research UI for multiple AI models, including loading states, streaming responses, and tool-call results.</li>
+<li>Improved SEO, optimized frontend bundles, refactored components, and maintained shared UI packages.</li>
+</ul>
+<p class="stack"><strong>Frontend technologies:</strong> Next.js 15, React 19, TypeScript, Tailwind CSS, shadcn/ui, Zustand, TanStack Query, Recharts, Socket.IO client</p>
+</article>
+<article>
+<h3>Ambassador – Multi-Partner Creator Platform</h3>
+<p class="meta">Company: DISO (diso.vn) | Client: AccessTrade | Role: Full-Stack Developer</p>
+<p>Creator and affiliate marketing platform with a shared admin system and branded websites for banking and business partners.</p>
+<ul>
+<li>Implemented RBAC across the backend and admin UI. Added role and permission settings, required-permission rules, and permission checks for forms, menus, and actions.</li>
+<li>Added API checks for partner-level access and masked sensitive creator data. Restricted which roles and partner scopes staff can assign to other staff.</li>
+<li>Build creator websites and admin portals with React, UmiJS, and TypeScript. Develop a React 18 and UmiJS 4 creator app with Express SSR for tax details, eKYC, bank details, and commissions.</li>
+<li>Implemented Go/Echo APIs with MongoDB and Redis, staff-scope migration through an API, and session permission snapshots with revocation when access settings change.</li>
+<li>Tested API authorization, partner-level data access, and role-based UI flows against a local backend with MongoDB replica sets and Redis. Compared regression results with the baseline branch.</li>
+</ul>
+<p class="stack"><strong>Tech stack:</strong> React 16/18, UmiJS 3/4, TypeScript, Ant Design, Tailwind CSS, Express, Go, Echo, MongoDB, Redis, Jest, Playwright</p>
+</article>
+<article>
+<h3>Selly.vn – E-Commerce Platform</h3>
+<p class="meta">Client: Selly | Team size: 10 | Role: Frontend Developer (with Backend Responsibilities)</p>
+<p>E-commerce system with a storefront, seller portal, merchant dashboard, admin panel, mobile webview, and Zalo Mini App.</p>
+<ul>
+<li>Built and maintained six frontend apps for customers, sellers, merchants, administrators, mobile users, and Zalo users.</li>
+<li>Developed product catalogs, checkout, order tracking, inventory management, campaigns, and affiliate features.</li>
+<li>Built real-time chat with Socket.IO for customer support and merchant communication.</li>
+<li>Added mobile webviews, deep links, Adjust tracking, and integrations with Firebase, Facebook, Telegram, Google, and TikTok.</li>
+<li>Added multilingual support, dark mode, and responsive layouts. Developed backend features with Go, Echo, and MongoDB.</li>
+<li>Worked with backend developers and designers, reviewed code, and fixed bugs.</li>
+</ul>
+<p class="stack"><strong>Technologies used:</strong> React, UmiJS, TypeScript, Bootstrap, Ant Design, Dva.js, Socket.IO client, Go, Echo, MongoDB, Firebase</p>
+</article>
+<article>
+<h3>Webview Mini Games</h3>
+<p class="meta">Clients: CaSe Group and banking partners | Team size: 6 | Role: Frontend Developer</p>
+<p>Reward-based games inside banking and game apps.</p>
+<ul>
+<li>Built spin-wheel, gift-opening, and scratch-card games with Tet, Christmas, and Mid-Autumn themes.</li>
+<li>Built admin tools for game settings, reward management, and campaign analytics. Used Zustand for client state and TanStack Query for API queries and mutations.</li>
+<li>Worked with backend developers and designers to improve game performance in host apps.</li>
+</ul>
+<p class="stack"><strong>Frontend technologies:</strong> Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Zustand, TanStack Query</p>
+</article>
+<article>
+<h3>Bio Link <span class="dates">Aug 2024 – Sep 2024</span></h3>
+<p class="meta">Client: CaSe Group | Team size: 5 | Role: Frontend Developer (with Backend Responsibilities)</p>
+<p>Personal profile pages with templates for social links, images, articles, and products.</p>
+<ul>
+<li>Built and maintained frontend code, added user and admin features, and fixed bugs.</li>
+<li>Improved performance, reduced bundle size, and refactored code.</li>
+</ul>
+<p class="stack"><strong>Tech stack:</strong> Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Go, Echo, MongoDB</p>
+</article>
+<article>
+<h3>Cashbag – Banking Cashback Platform</h3>
+<p class="meta">Client: Cashbag | Team size: 6 | Role: Frontend Developer</p>
+<p>Cashback platform for 15+ banking apps, including TPBank, MBBank, BIDV, and VPBank, with rewards, vouchers, and withdrawals.</p>
+<ul>
+<li>Developed webviews with branding for each bank and Firebase analytics.</li>
+<li>Built spin-wheel games, leaderboards, and seasonal reward campaigns.</li>
+<li>Built admin and CRM dashboards for campaign management, financial reports, and transaction audits.</li>
+<li>Added voucher management, withdrawals, and transaction history.</li>
+</ul>
+<p class="stack"><strong>Frontend technologies:</strong> React, UmiJS, TypeScript, Ant Design, Dva.js, Firebase Analytics</p>
+</article>
+<article>
+<h3>Selly Customer Support Chat <span class="dates">Feb 2023 – May 2023</span></h3>
+<p class="meta">Client: Selly suppliers | Team size: 5 | Role: Developer</p>
+<p>Real-time customer support chat for shopping questions.</p>
+<ul><li>Built the frontend and customer support chat features with Socket.IO.</li></ul>
+<p class="stack"><strong>Tech stack:</strong> React, UmiJS, Ant Design, Bootstrap, Socket.IO</p>
+</article>
+<article>
+<h3>Cashbag &amp; Selly Zalo Mini Apps <span class="dates">Dec 2022 – Jan 2023</span></h3>
+<p class="meta">Client: Cashbag &amp; Selly | Team size: 3 | Role: Frontend Developer</p>
+<p>Cashback and e-commerce apps on the Zalo platform.</p>
+<ul>
+<li>Set up the app structure and worked with backend developers on API integration and data flow.</li>
+<li>Built the UI from Figma designs, deployed the apps, and configured Zalo integration.</li>
+</ul>
+<p class="stack"><strong>Frontend technologies:</strong> UmiJS, TypeScript</p>
+</article>
+<article>
+<h3>Additional E-Commerce Projects – Mamori.vn &amp; Shop Selly</h3>
+<p class="meta">Role: Frontend Developer | Mamori.vn: Jul 2022, team of 1 | Shop Selly: team of 4</p>
+<ul>
+<li><strong>Mamori.vn:</strong> Built a product website for a Selly sub-brand from design specifications. Added order processing and report notifications through a Telegram bot.</li>
+<li><strong>Shop Selly:</strong> Developed e-commerce storefront features for Selly.vn Pro subscribers, maintained website functionality, and resolved bugs.</li>
+</ul>
+<p class="stack"><strong>Frontend technologies:</strong> React, UmiJS, Tailwind CSS, Bootstrap</p>
+</article>
+</section>
+<section aria-labelledby="personal-projects">
+<h2 id="personal-projects">Personal Projects</h2>
+<article>
+<h3>PassInterview (formerly Luyen Phong Van) <span class="dates">2026 – Present</span></h3>
+<p class="meta">Role: Full-Stack Developer | <a href="https://passinterview.app">passinterview.app</a></p>
+<p>Bilingual IT interview preparation platform serving 5,000 users, with 4,300+ questions and answers, flashcards, AI features, and subscription payments.</p>
+<ul>
+<li>Build the public app with Next.js, React, TypeScript, Tailwind CSS, and Neon PostgreSQL. Configure deployment to Cloudflare Workers with OpenNext.</li>
+<li>Build FSRS spaced-repetition flashcards with progress sync across devices. Add five step-by-step DSA visualizers for sliding window, two pointers, binary search, BFS, and DFS.</li>
+<li>Build AI CV analysis with job-description input and a streaming interview preparation assistant with saved chat history.</li>
+<li>Integrate Google and GitHub OAuth, SePay VietQR, Polar card payments, subscription access control, and transactional email with Resend.</li>
+<li>Build a Next.js admin dashboard with Drizzle ORM for users, orders, discounts, content moderation, and GA4 analytics.</li>
+<li>Develop an AI voice mock interview feature with Soniox speech recognition and speech synthesis, with Edge TTS as a fallback. This feature is not yet publicly launched.</li>
+</ul>
+<p class="stack"><strong>Tech stack:</strong> Next.js 16, React 19, TypeScript, Tailwind CSS 4, Neon PostgreSQL, Auth.js / NextAuth v5, Drizzle ORM, SePay, Polar, Resend, Soniox, Motion, Cloudflare Workers, OpenNext</p>
+</article>
+<article>
+<h3>Anfield Daily <span class="dates">2026</span></h3>
+<p class="meta">Role: Full-Stack Developer | <a href="https://anfielddaily.com">anfielddaily.com</a></p>
+<p>Independent Liverpool fan website with football news, AI daily summaries, match information, and community features.</p>
+<ul>
+<li>Build the app with Next.js App Router, React, TypeScript, and Supabase. Configure deployment to Cloudflare Workers with OpenNext.</li>
+<li>Build an RSS pipeline to collect articles from multiple sources, extract content, and remove duplicates. Generate AI daily summaries and save them to the database.</li>
+<li>Build match pages with fixtures, events, lineups, statistics, and ESPN data.</li>
+<li>Add score predictions and player ratings for signed-in users and save the data to Supabase.</li>
+<li>Build AI-assisted match reviews and multilingual content with next-intl.</li>
+</ul>
+<p class="stack"><strong>Tech stack:</strong> Next.js 16, React 19, TypeScript, Tailwind CSS 4, Supabase, TanStack Query, Zustand, next-intl, AI SDK, Cloudinary, Cloudflare Workers, OpenNext</p>
+</article>
+</section>
+<section aria-labelledby="spoken-languages">
+<h2 id="spoken-languages">Languages</h2>
+<p>Vietnamese: Native | English: Basic</p>
+</section>
+<section aria-labelledby="certificates">
+<h2 id="certificates">Courses &amp; Certificates</h2>
+<p><strong>Scrum Course</strong> | Axon Active Da Nang | Aug 2020<br><strong>ReactJS Course Completion Certificate</strong> | Udemy | Jan 2022</p>
+</section>
+</main>
+</body>
+</html>
